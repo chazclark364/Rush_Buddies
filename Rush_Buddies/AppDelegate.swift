@@ -7,14 +7,57 @@
 //
 
 import UIKit
+import AWSCore
+import AWSCognito
+import AWSDynamoDB
+import AWSCognitoIdentityProvider
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    var signInViewController: SignInViewController?
+    var mfaViewController: MFAViewController?
+    var navigationController: UINavigationController?
+    var storyboard: UIStoryboard?
+    var rememberDeviceCompletionSource: AWSTaskCompletionSource<NSNumber>?
+    
+    
 
 
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+        
+        // Warn user if configuration not updated
+        if (CognitoIdentityUserPoolId == "YOUR_USER_POOL_ID") {
+            let alertController = UIAlertController(title: "Invalid Configuration",
+                                                    message: "Please configure user pool constants in Constants.swift file.",
+                                                    preferredStyle: .alert)
+            let okAction = UIAlertAction(title: "Ok", style: .default, handler: nil)
+            alertController.addAction(okAction)
+            
+            self.window?.rootViewController!.present(alertController, animated: true, completion:  nil)
+        }
+        
+        AWSLogger.default().logLevel = .verbose
+        
+        let credentialsProvider = AWSCognitoCredentialsProvider(regionType:.USWest2, identityPoolId: "us-west-2_L2Py5bLjQ")
+        
+        let configuration = AWSServiceConfiguration(region: AWSRegionType.USWest2, credentialsProvider: credentialsProvider)
+        AWSServiceManager.default().defaultServiceConfiguration = configuration
+        
+        // create pool configuration
+        let poolConfiguration = AWSCognitoIdentityUserPoolConfiguration(clientId: "3ielovu4g8qk5hoh4e7mle0vpn",
+                                                                        clientSecret: "16ouof1embhlr4j8q5nfkk4193n3nv8854rqs2jl5uh67ea5t0",
+                                                                        poolId: "us-west-2_L2Py5bLjQ")
+        
+        // initialize user pool client
+        AWSCognitoIdentityUserPool.register(with: serviceConfiguration, userPoolConfiguration: poolConfiguration, forKey: AWSCognitoUserPoolsSignInProviderKey)
+        
+        // fetch the user pool client we initialized in above step
+        let pool = AWSCognitoIdentityUserPool(forKey: AWSCognitoUserPoolsSignInProviderKey)
+        self.storyboard = UIStoryboard(name: "Main", bundle: nil)
+        pool.delegate = self
+        
         // Override point for customization after application launch.
         return true
     }
