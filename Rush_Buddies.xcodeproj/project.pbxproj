@@ -15,7 +15,11 @@
 		DAD82CC61E612031006B84C3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAD82CC41E612031006B84C3 /* LaunchScreen.storyboard */; };
 		DAD82CD11E612031006B84C3 /* Rush_BuddiesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD82CD01E612031006B84C3 /* Rush_BuddiesTests.swift */; };
 		DAD82CDC1E612031006B84C3 /* Rush_BuddiesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD82CDB1E612031006B84C3 /* Rush_BuddiesUITests.swift */; };
+<<<<<<< HEAD
 		DAD82CEC1E613DBD006B84C3 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAD82CEB1E613DBD006B84C3 /* HealthKit.framework */; };
+=======
+		DF5B9C5CE6C68DDAB3688750 /* Pods_Rush_Buddies.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF28FAD5E2E8FB566C84284A /* Pods_Rush_Buddies.framework */; };
+>>>>>>> 4e583066637c7bd0a417c3585d4b27246e02618b
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +40,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BF28FAD5E2E8FB566C84284A /* Pods_Rush_Buddies.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Rush_Buddies.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C1C1AC94DAA8355FFC744AEC /* Pods-Rush_Buddies.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rush_Buddies.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Rush_Buddies/Pods-Rush_Buddies.debug.xcconfig"; sourceTree = "<group>"; };
+		C7614EA0F394037A09C27615 /* Pods-Rush_Buddies.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rush_Buddies.release.xcconfig"; path = "Pods/Target Support Files/Pods-Rush_Buddies/Pods-Rush_Buddies.release.xcconfig"; sourceTree = "<group>"; };
 		DAD82CB61E612031006B84C3 /* Rush_Buddies.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rush_Buddies.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAD82CB91E612031006B84C3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DAD82CBB1E612031006B84C3 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -59,7 +66,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+<<<<<<< HEAD
 				DAD82CEC1E613DBD006B84C3 /* HealthKit.framework in Frameworks */,
+=======
+				DF5B9C5CE6C68DDAB3688750 /* Pods_Rush_Buddies.framework in Frameworks */,
+>>>>>>> 4e583066637c7bd0a417c3585d4b27246e02618b
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,6 +91,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6E30AD29AB4CE45427FBA4E3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C1C1AC94DAA8355FFC744AEC /* Pods-Rush_Buddies.debug.xcconfig */,
+				C7614EA0F394037A09C27615 /* Pods-Rush_Buddies.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		CFEAB3B423F0198EE2EBF072 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BF28FAD5E2E8FB566C84284A /* Pods_Rush_Buddies.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		DAD82CAD1E612031006B84C3 = {
 			isa = PBXGroup;
 			children = (
@@ -87,7 +115,12 @@
 				DAD82CCF1E612031006B84C3 /* Rush_BuddiesTests */,
 				DAD82CDA1E612031006B84C3 /* Rush_BuddiesUITests */,
 				DAD82CB71E612031006B84C3 /* Products */,
+<<<<<<< HEAD
 				DAD82CEA1E613DBD006B84C3 /* Frameworks */,
+=======
+				6E30AD29AB4CE45427FBA4E3 /* Pods */,
+				CFEAB3B423F0198EE2EBF072 /* Frameworks */,
+>>>>>>> 4e583066637c7bd0a417c3585d4b27246e02618b
 			);
 			sourceTree = "<group>";
 		};
@@ -149,9 +182,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DAD82CE01E612031006B84C3 /* Build configuration list for PBXNativeTarget "Rush_Buddies" */;
 			buildPhases = (
+				F0C104E797692F2493E2127A /* [CP] Check Pods Manifest.lock */,
 				DAD82CB21E612031006B84C3 /* Sources */,
 				DAD82CB31E612031006B84C3 /* Frameworks */,
 				DAD82CB41E612031006B84C3 /* Resources */,
+				C6E2D9D2217C972FFBA0DEF3 /* [CP] Embed Pods Frameworks */,
+				E889F74BC80074E0F0FF3695 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -279,6 +315,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		C6E2D9D2217C972FFBA0DEF3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Rush_Buddies/Pods-Rush_Buddies-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E889F74BC80074E0F0FF3695 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Rush_Buddies/Pods-Rush_Buddies-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F0C104E797692F2493E2127A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		DAD82CB21E612031006B84C3 /* Sources */ = {
@@ -437,6 +521,7 @@
 		};
 		DAD82CE11E612031006B84C3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C1C1AC94DAA8355FFC744AEC /* Pods-Rush_Buddies.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Rush_Buddies/Rush_Buddies.entitlements;
@@ -451,6 +536,7 @@
 		};
 		DAD82CE21E612031006B84C3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C7614EA0F394037A09C27615 /* Pods-Rush_Buddies.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Rush_Buddies/Rush_Buddies.entitlements;
